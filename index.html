@@ -1,11 +1,62 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Url_Opener</title>
-  <script>
-    window.location.href = "https://riointernational.com.bd/category/mobile";
-  </script>
+  <title>Daily Health Tips</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #2e8b57;
+    }
+    .tip {
+      font-size: 20px;
+      margin: 20px 0;
+      padding: 10px;
+      background: #e0ffe0;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    button {
+      background: #2e8b57;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #3cb371;
+    }
+  </style>
 </head>
 <body>
-  <p></p>
+  <h1>💚 Daily Health Reminder 💚</h1>
+  <div class="tip" id="healthTip">Click the button to get a health tip!</div><br>
+  <button onclick="showTip()">Get a Tip</button>
+
+  <script>
+    const tips = [
+      "Drink at least 8 glasses of water daily.",
+      "Take a short walk after every meal.",
+      "Get 7-8 hours of sleep every night.",
+      "Eat more fresh fruits and vegetables.",
+      "Do at least 20 minutes of exercise daily.",
+      "Avoid sugary drinks and processed foods.",
+      "Take deep breaths to reduce stress.",
+      "Stretch your body every 2 hours while working.",
+      "Limit screen time before bed.",
+      "Practice gratitude for better mental health."
+    ];
+
+    function showTip() {
+      const randomIndex = Math.floor(Math.random() * tips.length);
+      document.getElementById("healthTip").innerText = tips[randomIndex];
+    }
+  </script>
 </body>
 </html>
